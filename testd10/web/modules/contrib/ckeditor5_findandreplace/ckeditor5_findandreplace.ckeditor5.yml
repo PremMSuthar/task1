@@ -1,0 +1,12 @@
+ckeditor5_findandreplace_findandreplace:
+  ckeditor5:
+    plugins:
+      - findAndReplace.FindAndReplace
+  drupal:
+    label: Find and replace
+    library: ckeditor5_findandreplace/findandreplace
+    admin_library: ckeditor5_findandreplace/admin.findandreplace
+    toolbar_items:
+      findandreplace:
+        label: Find and replace
+    elements: false

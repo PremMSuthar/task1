@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_job_employment_type
+field_name: field_job_employment_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: FULL_TIME
+      label: 'Full Time'
+    -
+      value: PART_TIME
+      label: 'Part Time'
+    -
+      value: CONTRACTOR
+      label: Contractor
+    -
+      value: TEMPORARY
+      label: Temporary
+    -
+      value: INTERN
+      label: Intern
+    -
+      value: VOLUNTEER
+      label: Colunteer
+    -
+      value: PER_DIEM
+      label: 'Per Diem'
+    -
+      value: OTHER
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

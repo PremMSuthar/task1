@@ -1,0 +1,362 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_job_base_salary_currency
+field_name: field_job_base_salary_currency
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ALL
+      label: 'Albania Lek'
+    -
+      value: AFN
+      label: 'Afghanistan Afghani'
+    -
+      value: ARS
+      label: 'Argentina Peso'
+    -
+      value: AWG
+      label: 'Aruba Guilder'
+    -
+      value: AUD
+      label: 'Australia Dollar'
+    -
+      value: AZN
+      label: 'Azerbaijan New Manat'
+    -
+      value: BSD
+      label: 'Bahamas Dollar'
+    -
+      value: BBD
+      label: 'Barbados Dollar'
+    -
+      value: BDT
+      label: 'Bangladeshi taka'
+    -
+      value: BYR
+      label: 'Belarus Ruble'
+    -
+      value: BZD
+      label: 'Belize Dollar'
+    -
+      value: BMD
+      label: 'Bermuda Dollar'
+    -
+      value: BOB
+      label: 'Bolivia Boliviano'
+    -
+      value: BAM
+      label: 'Bosnia and Herzegovina Convertible Marka'
+    -
+      value: BWP
+      label: 'Botswana Pula'
+    -
+      value: BGN
+      label: 'Bulgaria Lev'
+    -
+      value: BRL
+      label: 'Brazil Real'
+    -
+      value: BND
+      label: 'Brunei Darussalam Dollar'
+    -
+      value: KHR
+      label: 'Cambodia Riel'
+    -
+      value: CAD
+      label: 'Canada Dollar'
+    -
+      value: KYD
+      label: 'Cayman Islands Dollar'
+    -
+      value: CLP
+      label: 'Chile Peso'
+    -
+      value: CNY
+      label: 'China Yuan Renminbi'
+    -
+      value: COP
+      label: 'Colombia Peso'
+    -
+      value: CRC
+      label: 'Costa Rica Colon'
+    -
+      value: HRK
+      label: 'Croatia Kuna'
+    -
+      value: CUP
+      label: 'Cuba Peso'
+    -
+      value: CZK
+      label: 'Czech Republic Koruna'
+    -
+      value: DKK
+      label: 'Denmark Krone'
+    -
+      value: DOP
+      label: 'Dominican Republic Peso'
+    -
+      value: XCD
+      label: 'East Caribbean Dollar'
+    -
+      value: EGP
+      label: 'Egypt Pound'
+    -
+      value: SVC
+      label: 'El Salvador Colon'
+    -
+      value: EEK
+      label: 'Estonia Kroon'
+    -
+      value: EUR
+      label: Euro
+    -
+      value: FKP
+      label: 'Falkland Islands (Malvinas) Pound'
+    -
+      value: FJD
+      label: 'Fiji Dollar'
+    -
+      value: GHC
+      label: 'Ghana Cedis'
+    -
+      value: GIP
+      label: 'Gibraltar Pound'
+    -
+      value: GTQ
+      label: 'Guatemala Quetzal'
+    -
+      value: GGP
+      label: 'Guernsey Pound'
+    -
+      value: GYD
+      label: 'Guyana Dollar'
+    -
+      value: HNL
+      label: 'Honduras Lempira'
+    -
+      value: HKD
+      label: 'Hong Kong Dollar'
+    -
+      value: HUF
+      label: 'Hungary Forint'
+    -
+      value: ISK
+      label: 'Iceland Krona'
+    -
+      value: INR
+      label: 'India Rupee'
+    -
+      value: IDR
+      label: 'Indonesia Rupiah'
+    -
+      value: IRR
+      label: 'Iran Rial'
+    -
+      value: IMP
+      label: 'Isle of Man Pound'
+    -
+      value: ILS
+      label: 'Israel Shekel'
+    -
+      value: JMD
+      label: 'Jamaica Dollar'
+    -
+      value: JPY
+      label: 'Japan Yen'
+    -
+      value: JEP
+      label: 'Jersey Pound'
+    -
+      value: KZT
+      label: 'Kazakhstan Tenge'
+    -
+      value: KPW
+      label: 'Korea (North) Won'
+    -
+      value: KRW
+      label: 'Korea (South) Won'
+    -
+      value: KGS
+      label: 'Kyrgyzstan Som'
+    -
+      value: LAK
+      label: 'Laos Kip'
+    -
+      value: LVL
+      label: 'Latvia Lat'
+    -
+      value: LBP
+      label: 'Lebanon Pound'
+    -
+      value: LRD
+      label: 'Liberia Dollar'
+    -
+      value: LTL
+      label: 'Lithuania Litas'
+    -
+      value: MKD
+      label: 'Macedonia Denar'
+    -
+      value: MYR
+      label: 'Malaysia Ringgit'
+    -
+      value: MUR
+      label: 'Mauritius Rupee'
+    -
+      value: MXN
+      label: 'Mexico Peso'
+    -
+      value: MNT
+      label: 'Mongolia Tughrik'
+    -
+      value: MZN
+      label: 'Mozambique Metical'
+    -
+      value: NAD
+      label: 'Namibia Dollar'
+    -
+      value: NPR
+      label: 'Nepal Rupee'
+    -
+      value: ANG
+      label: 'Netherlands Antilles Guilder'
+    -
+      value: NZD
+      label: 'New Zealand Dollar'
+    -
+      value: NIO
+      label: 'Nicaragua Cordoba'
+    -
+      value: NGN
+      label: 'Nigeria Naira'
+    -
+      value: NOK
+      label: 'Norway Krone'
+    -
+      value: OMR
+      label: 'Oman Rial'
+    -
+      value: PKR
+      label: 'Pakistan Rupee'
+    -
+      value: PAB
+      label: 'Panama Balboa'
+    -
+      value: PYG
+      label: 'Paraguay Guarani'
+    -
+      value: PEN
+      label: 'Peru Nuevo Sol'
+    -
+      value: PHP
+      label: 'Philippines Peso'
+    -
+      value: PLN
+      label: 'Poland Zloty'
+    -
+      value: QAR
+      label: 'Qatar Riyal'
+    -
+      value: RON
+      label: 'Romania New Leu'
+    -
+      value: RUB
+      label: 'Russia Ruble'
+    -
+      value: SHP
+      label: 'Saint Helena Pound'
+    -
+      value: SAR
+      label: 'Saudi Arabia Riyal'
+    -
+      value: RSD
+      label: 'Serbia Dinar'
+    -
+      value: SCR
+      label: 'Seychelles Rupee'
+    -
+      value: SGD
+      label: 'Singapore Dollar'
+    -
+      value: SBD
+      label: 'Solomon Islands Dollar'
+    -
+      value: SOS
+      label: 'Somalia Shilling'
+    -
+      value: ZAR
+      label: 'South Africa Rand'
+    -
+      value: LKR
+      label: 'Sri Lanka Rupee'
+    -
+      value: SEK
+      label: 'Sweden Krona'
+    -
+      value: CHF
+      label: 'Switzerland Franc'
+    -
+      value: SRD
+      label: 'Suriname Dollar'
+    -
+      value: SYP
+      label: 'Syria Pound'
+    -
+      value: TWD
+      label: 'Taiwan New Dollar'
+    -
+      value: THB
+      label: 'Thailand Baht'
+    -
+      value: TTD
+      label: 'Trinidad and Tobago Dollar'
+    -
+      value: TRY
+      label: 'Turkey Lira'
+    -
+      value: TRL
+      label: 'Turkey Lira'
+    -
+      value: TVD
+      label: 'Tuvalu Dollar'
+    -
+      value: UAH
+      label: 'Ukraine Hryvna'
+    -
+      value: GBP
+      label: 'United Kingdom Pound'
+    -
+      value: USD
+      label: 'United States Dollar'
+    -
+      value: UYU
+      label: 'Uruguay Peso'
+    -
+      value: UZS
+      label: 'Uzbekistan Som'
+    -
+      value: VEF
+      label: 'Venezuela Bolivar'
+    -
+      value: VND
+      label: 'Viet Nam Dong'
+    -
+      value: YER
+      label: 'Yemen Rial'
+    -
+      value: ZWD
+      label: 'Zimbabwe Dollar'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

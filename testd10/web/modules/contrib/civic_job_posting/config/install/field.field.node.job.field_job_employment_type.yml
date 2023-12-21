@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_employment_type
+    - node.type.job
+  module:
+    - options
+id: node.job.field_job_employment_type
+field_name: field_job_employment_type
+entity_type: node
+bundle: job
+label: 'Job Employment Type'
+description: 'Type of employment. You can Choose Multiple types of employment with Ctrl + left click.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

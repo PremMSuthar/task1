@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_salary_base_value
+    - node.type.job
+id: node.job.field_job_salary_base_value
+field_name: field_job_salary_base_value
+entity_type: node
+bundle: job
+label: 'Job Salary Base Value'
+description: 'The actual base salary for the job, as provided by the employer (not an estimate).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

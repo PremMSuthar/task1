@@ -1,0 +1,12 @@
+name: RedHen Dedupe
+type: module
+description: Provides RedHen contact deduping functionality.
+core_version_requirement: ^8.7.7 || ^9 || ^10
+package: RedHen
+dependencies:
+  - redhen_contact
+
+# Information added by Drupal.org packaging script on 2023-10-04
+version: '2.1.0-rc1'
+project: 'redhen'
+datestamp: 1696447021

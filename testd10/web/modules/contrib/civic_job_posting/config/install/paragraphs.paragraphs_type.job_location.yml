@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: job_location
+label: 'Job Location'
+icon_uuid: null
+description: 'The physical location(s) of the business where the employee will report to work (such as an office or worksite), not the location where the job was posted. Include as many fields as possible. The more properties you provide, the higher quality the job posting is to our users'
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+services:
+  redhen_org.org_route_context:
+    class: Drupal\redhen_org\ContextProvider\RedhenOrgRouteContext
+    arguments: ['@current_route_match']
+    tags:
+      - { name: 'context_provider' }
+  redhen_org.route_subscriber:
+    class: Drupal\redhen_org\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,4 @@
+services:
+  modulefunda.db_insert:
+    class: Drupal\modulefunda\services\db_insert
+    arguments: ["@database"]

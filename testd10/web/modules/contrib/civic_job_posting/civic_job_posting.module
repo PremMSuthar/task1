@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * @file
+ * Main file for Civic Job Posting module.
+ *
+ * Module developed by Civic UK www.civicuk.com.
+ */
+
+use Drupal\node\NodeInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function civic_job_posting_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.job_posting':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('With google Job Posting you can improve the job seeking experience 
+by adding job posting structured data to your job posting web pages. 
+Adding structured data makes your job postings eligible to appear
+in a special user experience in Google Search results.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function civic_job_posting_page_attachments_alter(array &$attachments) {
+  $job_posting_settings = \Drupal::config('civic_job_posting.settings');
+
+  // Code to run to alter the $attachments variable.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $current_route_name = \Drupal::service('current_route_match')->getRouteName();
+
+  $google_verification = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'google-site-verification',
+      'content' => $job_posting_settings->get('google_site_verification'),
+    ],
+  ];
+
+  $attachments['#attached']['html_head'][] = [
+    $google_verification,
+    'google-site-verification',
+  ];
+
+  if (!is_null($node)) {
+    if (($node instanceof NodeInterface) && $node->getType() == 'job' && $current_route_name == 'entity.node.canonical') {
+
+      $job_json_ld = [
+        '#type' => 'html_tag',
+        '#tag' => 'script',
+        '#value' => \Drupal::service('civic_job_posting.indexing')->jobPostingValues(),
+        '#attributes' => ['type' => 'application/ld+json'],
+      ];
+
+      $attachments['#attached']['html_head'][] = [
+        $job_json_ld,
+        'job_post_script',
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function civic_job_posting_node_insert(NodeInterface $node) {
+
+  $indexing_enabled = \Drupal::config('civic_job_posting.settings')->get('enableIndexing');
+
+  if (!is_null($node) && $node->getType() == 'job' && $indexing_enabled) {
+
+    try {
+      if ($node->isPublished()) {
+        \Drupal::service('civic_job_posting.indexing')->jobPostingCallIndexingApi($node->id(), 'URL_UPDATED');
+      }
+      else {
+        \Drupal::service('civic_job_posting.indexing')->jobPostingCallIndexingApi($node->id(), 'URL_DELETED');
+      }
+      \Drupal::service('civic_job_posting.indexing')->jobPostingGetIndexingApi($node->id());
+    }
+    catch (\Throwable $e) {
+      \Drupal::logger('civic_job_posting')->error($e->getMessage());
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function civic_job_posting_node_update(NodeInterface $node) {
+
+  $indexing_enabled = \Drupal::config('civic_job_posting.settings')->get('enableIndexing');
+
+  if (!is_null($node) && $node->getType() == 'job' && $indexing_enabled) {
+
+    try {
+      if ($node->isPublished()) {
+        \Drupal::service('civic_job_posting.indexing')->jobPostingCallIndexingApi($node->id(), 'URL_UPDATED');
+      }
+      else {
+        \Drupal::service('civic_job_posting.indexing')->jobPostingCallIndexingApi($node->id(), 'URL_DELETED');
+      }
+      \Drupal::service('civic_job_posting.indexing')->jobPostingGetIndexingApi($node->id());
+    }
+    catch (\Throwable $e) {
+      \Drupal::logger('civic_job_posting')->error($e->getMessage());
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function civic_job_posting_node_delete(NodeInterface $node) {
+
+  $indexing_enabled = \Drupal::config('civic_job_posting.settings')->get('enableIndexing');
+
+  if (!is_null($node) && $node->getType() == 'job' && $indexing_enabled) {
+
+    try {
+      \Drupal::service('civic_job_posting.indexing')->jobPostingCallIndexingApi($node->id(), 'URL_DELETED');
+      \Drupal::service('civic_job_posting.indexing')->jobPostingGetIndexingApi($node->id());
+    }
+    catch (\Throwable $e) {
+      \Drupal::logger('civic_job_posting')->error($e->getMessage());
+    }
+  }
+}

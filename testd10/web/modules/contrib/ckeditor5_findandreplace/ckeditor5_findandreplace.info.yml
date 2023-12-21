@@ -1,0 +1,13 @@
+name: CKEditor5 find and replace
+type: module
+description: 'The CKEditor5 find and replace feature lets you find and replace any text in your document. This speeds up your work and helps with the consistency of your content.'
+package: CKEditor 5
+core_version_requirement: ^9 || ^10
+php: 8.1
+dependencies:
+  - drupal:ckeditor5
+
+# Information added by Drupal.org packaging script on 2023-04-27
+version: '1.1.2'
+project: 'ckeditor5_findandreplace'
+datestamp: 1682576917

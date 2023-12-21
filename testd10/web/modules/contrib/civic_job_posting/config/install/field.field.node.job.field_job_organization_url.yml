@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_organization_url
+    - node.type.job
+  module:
+    - link
+id: node.job.field_job_organization_url
+field_name: field_job_organization_url
+entity_type: node
+bundle: job
+label: 'Job Organization Url'
+description: 'This should be the website url of the company (for example, “https://www.example.com”).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

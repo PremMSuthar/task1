@@ -1,0 +1,6 @@
+name: hunger
+type: module
+description: This Module is config form create manual code write
+package: Custom
+version: 1.x
+core_version_requirement: ^9 || ^10

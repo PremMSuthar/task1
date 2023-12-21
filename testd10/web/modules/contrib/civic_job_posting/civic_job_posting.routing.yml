@@ -1,0 +1,39 @@
+job.posting_settings_form:
+  path: '/admin/config/services/jobpostingtsettings'
+  defaults:
+    _form: '\Drupal\civic_job_posting\Form\JobPostingSettings'
+    _title: 'Job Posting Settings Form'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+job.posting_job_currency:
+  path: '/rest/salary-currency'
+  defaults:
+    _controller: 'Drupal\civic_job_posting\Controller\JobPostingControllerJson::salaryCurrencyRender'
+    _title: 'JSON api'
+  methods:  [GET]
+  requirements:
+# public endpoint for frontend use if needed
+     _access: 'TRUE'
+
+job.posting_job_employment_type:
+  path: '/rest/employment-type'
+  defaults:
+    _controller: 'Drupal\civic_job_posting\Controller\JobPostingControllerJson::employmentTypeRender'
+    _title: 'JSON api'
+  methods:  [GET]
+  requirements:
+# public endpoint for frontend use if needed
+     _access: 'TRUE'
+
+job.posting_job_salary_unit:
+  path: '/rest/salary-unit'
+  defaults:
+    _controller: 'Drupal\civic_job_posting\Controller\JobPostingControllerJson::salaryUnitRender'
+    _title: 'JSON api'
+  methods:  [GET]
+  requirements:
+# public endpoint for frontend use if needed
+    _access: 'TRUE'

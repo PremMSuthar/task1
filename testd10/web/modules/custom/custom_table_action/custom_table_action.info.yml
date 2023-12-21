@@ -1,0 +1,7 @@
+name: 'Custom Table Actions'
+type: module
+description: 'A custom module for demonstration purposes.'
+core_version_requirement: ^8 || ^9
+package: Custom
+dependencies:
+  - drupal:views

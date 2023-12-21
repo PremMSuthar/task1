@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * implementation hook_theme()
+ */
+
+function modulefunda_theme($existing, $type, $theme, $path)
+{
+    return [
+        'my_template' => [
+            'variables' => ['data' => NULL],
+        ],
+    ];
+}

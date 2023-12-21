@@ -1,0 +1,15 @@
+findandreplace:
+  js:
+    js/build/find-and-replace.js: { preprocess: false, minified: true }
+  dependencies:
+    - core/ckeditor5
+
+theme:
+  css:
+    theme:
+      css/findandreplace.css: {}
+
+admin.findandreplace:
+  css:
+    theme:
+      css/findandreplace.admin.css: {}

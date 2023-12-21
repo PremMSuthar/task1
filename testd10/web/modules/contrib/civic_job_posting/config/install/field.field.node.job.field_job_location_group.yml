@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_location_group
+    - node.type.job
+    - paragraphs.paragraphs_type.job_location
+  module:
+    - entity_reference_revisions
+id: node.job.field_job_location_group
+field_name: field_job_location_group
+entity_type: node
+bundle: job
+label: 'Job Location Group'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      job_location: job_location
+    target_bundles_drag_drop:
+      job_location:
+        enabled: true
+        weight: 3
+      presentation_body:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

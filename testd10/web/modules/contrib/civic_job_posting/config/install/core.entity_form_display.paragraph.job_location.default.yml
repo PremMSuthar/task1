@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_location.field_job_country_code
+    - field.field.paragraph.job_location.field_job_locality
+    - field.field.paragraph.job_location.field_job_postal_code
+    - field.field.paragraph.job_location.field_job_region
+    - field.field.paragraph.job_location.field_job_street_address
+    - paragraphs.paragraphs_type.job_location
+id: paragraph.job_location.default
+targetEntityType: paragraph
+bundle: job_location
+mode: default
+content:
+  field_job_country_code:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_locality:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_postal_code:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_region:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_street_address:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

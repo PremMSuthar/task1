@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for Civic Job Posting module.
+ *
+ * Module developed by Civic UK www.civicuk.com.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function civic_job_posting_uninstall() {
+  /** @var \Drupal\Core\Config\ConfigFactoryInterface $configFactory */
+  $configFactory = \Drupal::configFactory();
+  $logger = \Drupal::logger('civic_job_posting');
+
+  $configNames = [
+    'core.entity_form_display.node.job.default',
+    'core.entity_form_display.paragraph.job_location.default',
+    'core.entity_view_display.node.job.default',
+    'core.entity_view_display.node.job.teaser',
+    'core.entity_view_display.paragraph.job_location.default',
+    'field.field.node.job.body',
+    'field.field.node.job.field_is_this_work_remotely',
+    'field.field.node.job.field_job_applicant_remote_count',
+    'field.field.node.job.field_job_apply_email',
+    'field.field.node.job.field_job_apply_url',
+    'field.field.node.job.field_job_base_salary_currency',
+    'field.field.node.job.field_job_employment_type',
+    'field.field.node.job.field_job_expiry_date',
+    'field.field.node.job.field_job_identifier',
+    'field.field.node.job.field_job_identifier_value',
+    'field.field.node.job.field_job_location_group',
+    'field.field.node.job.field_job_organization_logo',
+    'field.field.node.job.field_job_organization_name',
+    'field.field.node.job.field_job_organization_url',
+    'field.field.node.job.field_job_salary_base_value',
+    'field.field.node.job.field_job_salary_max_value',
+    'field.field.node.job.field_job_salary_min_value',
+    'field.field.node.job.field_job_salary_unit',
+    'field.field.node.job.field_job_starting_date',
+    'field.field.paragraph.job_location.field_job_country_code',
+    'field.field.paragraph.job_location.field_job_locality',
+    'field.field.paragraph.job_location.field_job_postal_code',
+    'field.field.paragraph.job_location.field_job_region',
+    'field.field.paragraph.job_location.field_job_street_address',
+    'field.storage.node.field_is_this_work_remotely',
+    'field.storage.node.field_job_applicant_remote_count',
+    'field.storage.node.field_job_apply_email',
+    'field.storage.node.field_job_apply_url',
+    'field.storage.node.field_job_base_salary_currency',
+    'field.storage.node.field_job_employment_type',
+    'field.storage.node.field_job_expiry_date',
+    'field.storage.node.field_job_identifier',
+    'field.storage.node.field_job_identifier_value',
+    'field.storage.node.field_job_location_group',
+    'field.storage.node.field_job_organization_logo',
+    'field.storage.node.field_job_organization_name',
+    'field.storage.node.field_job_organization_url',
+    'field.storage.node.field_job_salary_base_value',
+    'field.storage.node.field_job_salary_max_value',
+    'field.storage.node.field_job_salary_min_value',
+    'field.storage.node.field_job_salary_unit',
+    'field.storage.node.field_job_starting_date',
+    'field.storage.paragraph.field_job_country_code',
+    'field.storage.paragraph.field_job_locality',
+    'field.storage.paragraph.field_job_postal_code',
+    'field.storage.paragraph.field_job_region',
+    'field.storage.paragraph.field_job_street_address',
+    'civic_job_posting.settings',
+    'node.type.job',
+    'paragraphs.paragraphs_type.job_location',
+    'views.view.job_view',
+  ];
+
+  foreach ($configNames as $configName) {
+    try {
+      $configFactory->getEditable($configName)->delete();
+    }
+    catch (\Exception $e) {
+      $logger->warning(sprintf('Unable to uninstall config: %s.', $configName));
+    }
+  }
+}

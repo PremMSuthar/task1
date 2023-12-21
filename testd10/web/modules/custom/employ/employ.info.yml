@@ -1,0 +1,5 @@
+name: employ
+description: this module done simple csv file in database
+core_version_requirement: ^8 || ^9
+type: module
+package: Cs

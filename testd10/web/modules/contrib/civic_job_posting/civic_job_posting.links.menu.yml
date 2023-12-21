@@ -1,0 +1,6 @@
+job.posting_settings_form:
+  title: 'Job Posting Settings'
+  description: 'Job Posting'
+  route_name: 'job.posting_settings_form'
+  parent:  system.admin_config_services
+  weight: 99

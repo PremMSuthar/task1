@@ -1,0 +1,64 @@
+<?php
+function employ_menu()
+{
+    $items = [];
+
+    $items['admin/employ/list'] = [
+        'title' => 'List Books',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => ['employ_list_form'],
+        'access arguments' => ['administer site configuration'],
+    ];
+
+    $items['admin/employ/add'] = [
+        'title' => 'Add Book',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => ['employ_add_form'],
+        'access arguments' => ['administer site configuration'],
+    ];
+
+    $items['admin/employ/edit/%'] = [
+        'title' => 'Edit Book',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => ['employ_edit_form', 4], // Replace 4 with the argument position.
+        'access arguments' => ['administer site configuration'],
+    ];
+
+    $items['admin/employ/delete/%'] = [
+        'title' => 'Delete Book',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => ['employ_delete_form', 4], // Replace 4 with the argument position.
+        'access arguments' => ['administer site configuration'],
+    ];
+
+    return $items;
+}
+/**
+ * Implements hook_entity_info().
+ */
+// function employ_entity_info()
+// {
+//     $info = [];
+
+//     $info['student'] = [
+//         'label' => t('stdata'),
+//         'base table' => 'student',
+//         'entity keys' => [
+//             'id' => 'id',
+//         ],
+//     ];
+
+//     return $info;
+// }
+
+
+/**
+ * Implements hook_theme().
+ */
+// function employ_view_theme($existing, $type, $theme, $path) {
+//   return [
+//     'table' => [
+//       'variables' => ['header' => [], 'rows' => []],
+//     ],
+//   ];
+// }

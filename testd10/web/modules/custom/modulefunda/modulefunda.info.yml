@@ -1,0 +1,6 @@
+name: modulefunda
+description: this module is used to get information which file is used for 
+type: module
+core_version_requirement: ^9
+package: custom
+version: 1.x-dev@dev

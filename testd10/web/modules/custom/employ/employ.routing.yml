@@ -1,0 +1,97 @@
+employ.crete:
+  path: '/uploadcsv'
+  defaults:
+    _form: '\Drupal\employ\Form\EmployForm'
+    _title: 'Upload csv'
+  requirements:
+    _permission: 'access content'
+employ.add:
+  path: '/add-employ'
+  defaults:
+    _form: '\Drupal\employ\Form\EditForm'
+    _title: 'Add Employ'
+  requirements:
+    _permission: 'access content'
+employ.Edit:
+  path: '/edit-employ/{id}'
+  defaults:
+    _form: '\Drupal\employ\Form\EditForm'
+    _title: 'Edit Employ'
+  requirements:
+    _permission: 'access content'
+# employ.delete-data:
+#   path: '/delete-data/{id}'
+#   defaults:
+#     _controller: '\Drupal\employ\Controller\EmployController::deletedata'
+#     _title: 'Delete data'
+#   requirements:
+#     _permission: 'access content'
+employ.delete:
+  path: '/delete-employ/{id}'
+  defaults:
+    _form: '\Drupal\employ\Form\DeleteForm'
+    _title: 'Delete Employ'
+  requirements:
+    _permission: 'access content'
+employ.student:
+  path: '/add-student'
+  defaults:
+    _form: '\Drupal\employ\Form\StudentForm'
+    _title: 'Add Student'
+  requirements:
+    _permission: 'access content'
+employ.edstudent:
+  path: '/edit-st/{id}'
+  defaults:
+    _form: '\Drupal\employ\Form\StudentForm'
+    _title: 'Edit Student'
+  requirements:
+    _permission: 'access content'
+employ.delstudent:
+  path: '/del-st/{id}'
+  defaults:
+    _form: '\Drupal\employ\Form\DeleteSt'
+    _title: 'del Student'
+  requirements:
+    _permission: 'access content'
+employ.images:
+  path: '/image'
+  defaults:
+    _form: '\Drupal\employ\Form\ImageUploadForm'
+    _title: 'Image Upload'
+  requirements:
+    _permission: 'access content'
+employ.filter:
+  path: '/filter'
+  defaults:
+    _form: '\Drupal\employ\Form\CustomDateFilterForm'
+    _title: 'filter date'
+  requirements:
+    _permission: 'access content'
+employ.bulk_delete_form:
+  path: '/bulk'
+  defaults:
+    _form: '\Drupal\employ\Form\BulkDeleteForm'
+  requirements:
+    _permission: 'access content'  # Adjust permissions as needed.
+employ.qw:
+  path: '/dts'
+  defaults:
+    _controller: '\Drupal\employ\Controller\WqAnnualReportForm::content'
+    _title: 'wq Table View'
+  requirements:
+    _permission: 'access content' 
+employ.list1:
+  path: '/tableview'
+  defaults:
+    _controller: '\Drupal\employ\Controller\CustomTableViewController::content'
+    _title: 'Custom Table View'
+  requirements:
+    _permission: 'access content'
+# employ.list2:
+#   path: '/lise'
+#   defaults:
+#     _controller: '\Drupal\employ\Form\Listtable'
+#     _title: 'Custom Table lise'
+#   requirements:
+#     _permission: 'access content'

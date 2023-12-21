@@ -1,0 +1,18 @@
+name: Civic Job Posting
+description: A module for adding Jobs and integrate with Google Job Posting
+type: module
+package: Civic
+core_version_requirement: ^8 || ^9 || ^10
+libraries:
+  - civic_job_posting
+dependencies:
+  - drupal:paragraphs
+  - drupal:field_group
+  - drupal:serialization
+  - drupal:rest
+  - drupal:search
+
+# Information added by Drupal.org packaging script on 2023-09-11
+version: '1.0.5'
+project: 'civic_job_posting'
+datestamp: 1694426263

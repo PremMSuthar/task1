@@ -1,0 +1,13 @@
+name: Webhooks
+type: module
+description: "User-defined HTTP callbacks"
+core_version_requirement: ^9 || ^10
+package: Webhooks
+dependencies:
+  - serialization
+configure: entity.webhook_config.collection
+
+# Information added by Drupal.org packaging script on 2022-07-29
+version: '2.0.0-alpha1'
+project: 'webhooks'
+datestamp: 1659091133

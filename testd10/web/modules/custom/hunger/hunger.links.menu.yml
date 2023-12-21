@@ -1,0 +1,6 @@
+hunger.config:
+  title: hunger
+  description: Write Manual code to create config form
+  parent: system.admin_config_system
+  route_name: hunger.config
+  weight: 10

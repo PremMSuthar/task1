@@ -1,0 +1,5 @@
+name: 'dmd'
+type: module
+description: 'nothing'
+package: Custom
+core_version_requirement: ^10

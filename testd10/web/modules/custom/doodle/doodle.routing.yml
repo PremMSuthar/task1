@@ -1,0 +1,7 @@
+doodle.config:
+  path: '/admin/config/system/Doodle'
+  defaults:
+    _form: 'Drupal\doodle\Form\SettingsForm'
+    _title: 'Doodle'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,6 @@
+doodle.config:
+  title: Google
+  description: this is config form create using drush
+  parent: system.admin_config_system
+  route_name: doodle.config
+  weight: 10

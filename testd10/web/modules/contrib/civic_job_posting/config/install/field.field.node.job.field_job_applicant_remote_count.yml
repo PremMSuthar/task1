@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_applicant_remote_count
+    - node.type.job
+id: node.job.field_job_applicant_remote_count
+field_name: field_job_applicant_remote_count
+entity_type: node
+bundle: job
+label: 'Job Applicant Remote Country'
+description: 'Please fill this field only for specific Applicant Remote Country. If you need multiple Countries then separated by commas.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Bootstrap Barrio Subtheme.
+
+testd10.settings:
+  type: theme_settings
+  label: 'testd10 settings'

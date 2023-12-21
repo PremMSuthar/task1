@@ -1,0 +1,4 @@
+services:
+  civic_job_posting.indexing:
+    class: Drupal\civic_job_posting\Utils\JobPostingUtils
+    arguments: ['@logger.factory', '@current_route_match', '@file_url_generator', '@entity.repository', '@config.factory']

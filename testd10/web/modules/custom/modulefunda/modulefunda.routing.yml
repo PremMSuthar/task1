@@ -1,0 +1,13 @@
+modulefunda.servicw:
+  path: '/services'
+  defaults:
+    _form: '\Drupal\modulefunda\Form\customform'
+    _title: 'services Form'
+  requirements:
+    _permission: 'access content'
+modulefunda.content:
+  path: '/TableData'
+  defaults:
+    _controller: '\Drupal\modulefunda\Controller\TableData::content'
+  requirements:
+    _permission: 'access content'

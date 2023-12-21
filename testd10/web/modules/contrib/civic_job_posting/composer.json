@@ -1,0 +1,12 @@
+{
+  "name": "drupal/civic_job_posting",
+  "description": "Custom module for Civic Job Posting.",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/field_group": "^3.0",
+    "drupal/paragraphs": "^1.2",
+    "google/apiclient": "^2.0"
+  }
+}

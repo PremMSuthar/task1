@@ -1,0 +1,10 @@
+civic_job_posting:
+  js:
+    js/job_posting.js: {}
+  dependencies:
+    - core/jquery
+job_posting_form:
+  js:
+    js/job_posting_settings_form.js: {}
+  dependencies:
+    - core/jquery

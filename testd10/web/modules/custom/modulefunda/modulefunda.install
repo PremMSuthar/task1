@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * implement schema()
+ */
+
+function modulefunda_schema(){
+    $scheme['funda'] = array(
+        'fields' => array(
+            'id' => array(
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE
+            ),
+            'name' => array(
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+            ),
+            'email' => array(
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+            ),
+            'created' => array(
+                'type' => 'int',
+                'not null' => TRUE,
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+    return $scheme;
+}

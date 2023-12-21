@@ -1,0 +1,4 @@
+employjslibraries:
+  version: '1.0'
+  js:
+    js/index.js: {}

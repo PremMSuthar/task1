@@ -1,0 +1,7 @@
+hunger.config:
+  path: '/admin/config/hunger'
+  defaults:
+    _form: 'Drupal\hunger\Form\Hunger'
+    _title: 'temp Form'
+  requirements:
+    _permission: 'administer site configuration'
